@@ -4,6 +4,15 @@
     background-color: var(--grey-light-2);
     box-shadow: var(--shadow-dark);
     min-height: 50rem;
+    color: var(--grey-dark-3);
+
+    @media only screen and (max-width: $bp-largest){
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        min-height: 850px;
+    }
+
 }
 
 .header {
@@ -18,6 +27,12 @@
 
 .content {
     display: flex;
+    min-height: 1100px;
+
+    @media only screen and (max-width: $bp-large){
+        min-height: 650px;
+        flex-direction: column;
+    }
 }
 
 .sidebar {
@@ -33,3 +48,37 @@
     flex: 1;
     height: 80rem;
 }
+
+.detail {
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--grey-light-1);
+    border-bottom: var(--line);
+    
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+}
+
+.description {
+    font-size: inherit;
+    background-color: white;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.user-reviews {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
